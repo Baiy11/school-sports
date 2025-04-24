@@ -3,67 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <title>Home - School Sports</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2em;
+      background-color: #f8f9fa;
+    }
+    nav a {
+      margin-right: 1em;
+    }
+    .banner {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1em;
+      margin: 1em 0;
+    }
+    .banner img {
+      width: 30%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+    .events {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1em;
+      margin-top: 2em;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .events h2 {
+      margin-top: 0;
+    }
+    .event {
+      padding: 0.5em 0;
+      border-bottom: 1px solid #eee;
+    }
+    .event:last-child {
+      border-bottom: none;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to the School Sports Portal</h1>
+
+  <h1>Welcome to School Sports Central</h1>
+
   <nav>
-    <a href="home.html">Home</a>
-    <a href="#sports">Sports</a>
+    <a href="sports.html">Sports</a>
     <a href="settings.html">Settings</a>
   </nav>
 
-  <section id="sports">
-    <h2>Find Your Team</h2>
+  <div class="banner">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/American_football_in_white_background.jpg/640px-American_football_in_white_background.jpg" alt="Football">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Volleyball_(1).jpg/640px-Volleyball_(1).jpg" alt="Volleyball">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Soccer_ball.svg/640px-Soccer_ball.svg.png" alt="Soccer">
+  </div>
 
-    <form onsubmit="handleSportSubmit(event)">
-      <label for="sport">Choose a sport:</label>
-      <select id="sport" required>
-        <option value=\"\">-- Select a Sport --</option>
-        <optgroup label=\"Fall\">
-          <option>Football</option>
-          <option>Cross Country</option>
-          <option>Volleyball</option>
-          <option>Soccer (Boys)</option>
-        </optgroup>
-        <optgroup label=\"Winter\">
-          <option>Basketball</option>
-          <option>Wrestling</option>
-          <option>Indoor Track</option>
-          <option>Swimming</option>
-        </optgroup>
-        <optgroup label=\"Spring\">
-          <option>Baseball</option>
-          <option>Softball</option>
-          <option>Track and Field</option>
-          <option>Soccer (Girls)</option>
-        </optgroup>
-        <optgroup label=\"Summer\">
-          <option>Summer Training</option>
-          <option>Summer League Basketball</option>
-          <option>Soccer Clinics</option>
-          <option>Swim Club</option>
-        </optgroup>
-      </select>
+  <section class="events">
+    <h2>Upcoming Events</h2>
 
-      <br><br>
-      <label for="school">Enter your school or team name:</label>
-      <input type="text" id="school" placeholder="e.g., Lincoln High Tigers" required>
-
-      <br><br>
-      <button type="submit">Submit</button>
-    </form>
-
-    <div id="result" style="margin-top: 1em; font-weight: bold;"></div>
+    <div class="event">
+      <strong>🏈 Fall Football Kickoff:</strong> Sept 3rd @ Lincoln High Stadium
+    </div>
+    <div class="event">
+      <strong>🏃 Cross Country Invitational:</strong> Sept 10th @ Riverside Park
+    </div>
+    <div class="event">
+      <strong>🏀 Winter Tryouts Begin:</strong> Nov 5th in School Gym
+    </div>
+    <div class="event">
+      <strong>🥇 Spring Track Meet:</strong> April 18th @ County Sports Complex
+    </div>
   </section>
 
-  <script>
-    function handleSportSubmit(event) {
-      event.preventDefault();
-      const sport = document.getElementById('sport').value;
-      const school = document.getElementById('school').value;
-      const resultDiv = document.getElementById('result');
-      resultDiv.textContent = `You selected ${sport} for the team: ${school}`;
-    }
-  </script>
 </body>
 </html>
