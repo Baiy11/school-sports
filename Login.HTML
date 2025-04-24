@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - School Sports</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 2em; }
+    .form-group { margin-bottom: 1em; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+
+  <h2>School Sports Portal</h2>
+
+  <!-- Login Form -->
+  <section id="login-form">
+    <h3>Login</h3>
+    <form action="home.html" method="get">
+      <div class="form-group">
+        <label>Username:</label>
+        <input type="text" name="username" required>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" name="password" required>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#" onclick="toggleForms()">Sign Up</a></p>
+  </section>
+
+  <!-- Sign Up Form -->
+  <section id="signup-form" class="hidden">
+    <h3>Create an Account</h3>
+    <form onsubmit="handleSignup(event)">
+      <div class="form-group">
+        <label>Username:</label>
+        <input type="text" id="new-username" required>
+      </div>
+      <div class="form-group">
+        <label>Password:</label>
+        <input type="password" id="new-password" required>
+      </div>
+      <div class="form-group">
+        <label>Email:</label
