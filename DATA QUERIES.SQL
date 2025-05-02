@@ -32,3 +32,34 @@ JOIN students s ON p.student_id = s.id
 JOIN games g ON p.game_id = g.id
 WHERE p.id IS NOT NULL
 GROUP BY p.id, s.first_name, s.last_name, g.opponent, p.score, p.remarks;
+
+-- 6. List all teams a specific student has been selected for
+SELECT t.name AS team_name, t.sport, t.season
+FROM selections sel
+JOIN teams t ON sel.team_id = t.id
+WHERE sel.student_id = 101;
+
+-- 7. Find the average score of each student across all games
+SELECT s.first_name, s.last_name, AVG(p.score) AS average_score
+FROM performance p
+JOIN students s ON p.student_id = s.id
+GROUP BY s.id, s.first_name, s.last_name;
+
+-- 8. Get top-performing students (score > 20) in a specific game
+SELECT s.first_name, s.last_name, p.score
+FROM performance p
+JOIN students s ON p.student_id = s.id
+WHERE p.game_id = 12 AND p.score > 20;
+
+-- 9. List all upcoming games for a specific team
+SELECT g.opponent, g.game_date, g.location
+FROM games g
+WHERE g.team_id = 5 AND g.game_date > CURRENT_DATE
+ORDER BY g.game_date;
+
+-- 10. Count how many students are selected for each team
+SELECT t.name AS team_name, COUNT(sel.student_id) AS total_selected
+FROM selections sel
+JOIN teams t ON sel.team_id = t.id
+GROUP BY t.id, t.name
+ORDER BY total_selected DESC;
