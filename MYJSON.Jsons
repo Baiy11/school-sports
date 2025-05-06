@@ -1,0 +1,97 @@
+{
+  "teams": [
+    { "team_id": 1, "team_name": "Archers", "sport_id": 101 },
+    { "team_id": 2, "team_name": "Legends", "sport_id": 109 },
+    { "team_id": 3, "team_name": "Generals", "sport_id": 110 },
+    { "team_id": 4, "team_name": "Spartan", "sport_id": 106 }
+  ],
+  "sports": [
+    { "sport_id": 101, "sport_name": "Baseball" },
+    { "sport_id": 102, "sport_name": "Swimming" },
+    { "sport_id": 103, "sport_name": "Cross Country" },
+    { "sport_id": 104, "sport_name": "Wrestling" },
+    { "sport_id": 105, "sport_name": "SoftBall" },
+    { "sport_id": 106, "sport_name": "FootBall" },
+    { "sport_id": 107, "sport_name": "Golf" },
+    { "sport_id": 108, "sport_name": "Track and Field" },
+    { "sport_id": 109, "sport_name": "Soccer" },
+    { "sport_id": 110, "sport_name": "BasketBall" },
+    { "sport_id": 111, "sport_name": "Field Hockey" },
+    { "sport_id": 112, "sport_name": "Cheerleading" },
+    { "sport_id": 113, "sport_name": "Tennis" },
+    { "sport_id": 114, "sport_name": "VollyBall" },
+    { "sport_id": 115, "sport_name": "Gymnastics" }
+  ],
+  "user_login": [
+    {
+      "user_id": 1,
+      "username": "coach_sam",
+      "password_hash": "5f4dcc3b5aa765d61d8327deb882cf99",
+      "role": "coach"
+    },
+    {
+      "user_id": 2,
+      "username": "player_ana",
+      "password_hash": "e99a18c428cb38d5f260853678922e03",
+      "role": "player"
+    },
+    {
+      "user_id": 3,
+      "username": "admin_jane",
+      "password_hash": "b6d767d2f8ed5d21a44b0e5886680cb9",
+      "role": "admin"
+    }
+  ],
+  "Player_info": [
+    {
+      "player_id": 1,
+      "first_name": "Ana",
+      "last_name": "Lopez",
+      "team_id": 1,
+      "position": "Shooter",
+      "age": 19
+    },
+    {
+      "player_id": 2,
+      "first_name": "Brian",
+      "last_name": "Turner",
+      "team_id": 2,
+      "position": "Midfielder",
+      "age": 21
+    },
+    {
+      "player_id": 3,
+      "first_name": "Sophie",
+      "last_name": "Wang",
+      "team_id": 3,
+      "position": "Guard",
+      "age": 20
+    },
+    {
+      "player_id": 4,
+      "first_name": "Derek",
+      "last_name": "Lee",
+      "team_id": 4,
+      "position": "Defender",
+      "age": 22
+    }
+  ],
+  "seasons": [
+    {
+      "season_name": "Spring",
+      "sports": ["Baseball", "SoftBall", "Soccer", "Tennis"]
+    },
+    {
+      "season_name": "Summer",
+      "sports": ["Swimming", "FootBall", "BasketBall", "VollyBall"]
+    },
+    {
+      "season_name": "Fall",
+      "sports": ["Cross Country", "Golf", "Field Hockey", "FootBall"]
+    },
+    {
+      "season_name": "Winter",
+      "sports": ["Wrestling", "Track and Field", "Cheerleading", "Gymnastics"]
+    }
+  ]
+}
